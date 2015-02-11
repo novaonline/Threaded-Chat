@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hermes Messenger 3</title>
+	<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> !-->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script> 
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script> 
+	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<script src="jquery/bootbox.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+  </head>
+  <body>
+  <!-- The hidden stuff !-->
+    <ul class="list-group" id="messages"></ul>
+	<span id="statusBox" class="status label-default"></span>
+	<span id="newMsgBox" class="status_newMsg label-info"></span>
+   
+   <!-- The Input stuff !-->
+	<form action="">
+	  <div id="inputbox" class="input-group inputchat">
+		
+		<input id="m" type="text" class="form-control ui-autocomplete-input" autocomplete="off">
+		
+		
+		<div id='dropdownbox' class="input-group-btn dropup">
+        		<button id="submit" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Send<span class="caret"></span></button>
+        		<ul id="dropdownbox_data" class="dropdown-menu" role="menu">
+          			<!-- 
+					Dynamically populated by server
+					Format: <li><a href="#">Action</a></li>
+					!-->
+        		</ul>
+      	</div>
+		
+		<!--<div class="input-group-btn">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">Send</button>
+			</span>
+		</div> !-->
+		
+		
+	  </div>
+    </form>
+	
+	<!-- The Javascript Stuff !-->
+		<script src="index.js"></script>
+		<script src="client.js"></script>
+  </body>
+</html>
