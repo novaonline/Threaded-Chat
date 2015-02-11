@@ -94,8 +94,8 @@ for (var dev in ifaces) {
 	});
 }
 
-http.listen(3000, function () {
-	console.log("listening on", ip? ip:"localhost", "port " + 3000);
+http.listen(80, function () {
+	console.log("listening on", ip? ip:"localhost", "port " + 80);
 	//console.log('listening on localhost:3000');
 });
 
