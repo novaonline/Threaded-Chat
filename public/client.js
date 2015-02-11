@@ -59,6 +59,10 @@ $('#m').keypress(function (e) {
 		}else {
 			clearTimeout(timeout);
 			timeout = setTimeout(timeoutFunction, 500);
+				if (!($("#m").val().length === 0)) {
+				console.log("Something happened");
+				sendToAll();
+		}
 		}
 	}else{
 		
