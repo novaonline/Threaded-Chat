@@ -84,19 +84,9 @@ io.on('connection', function (socket) {
 	//end of connection socket function
 });
 
-var os = require('os');
-var ifaces = os.networkInterfaces();
-var ip = "";
-for (var dev in ifaces) {
-	ifaces[dev].forEach(function (details) {
-		if (details.family == 'IPv4' && ip == "") {
-			ip = details.address;
-		}
-	});
-}
 
 http.listen(port, function () {
-	console.log("listening on", ip? ip:"localhost", "port " + port);
+	console.log("localhost:" + port);
 	//console.log('listening on localhost:3000');
 });
 
