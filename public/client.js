@@ -80,7 +80,7 @@ socket.on("isTyping", function (PersonTypingObj) {
 });
 
 // You sending message
-$('form').submit(function () {
+$('#submit').onclick(function () {
 	if (!($("#m").val().length === 0)) {
 		sendToAll();
 	}
