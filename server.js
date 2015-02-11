@@ -8,9 +8,9 @@ process.env.PWD = process.cwd();
 
 app.use("/public",express.static (process.env.PWD + '/public'))
 
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
 	res.sendfile('public/index.html'); //our link to the index.html aka our views
-});
+});*/
 
 /*
 This means that the server can push messages to clients. Whenever you write a chat message, 
