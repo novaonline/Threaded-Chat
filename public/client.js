@@ -50,6 +50,7 @@ function timeoutFunction() {
 	socket.emit("typing", false);
 }
 
+
 $('#m').keypress(function (e) {
 	if (e.which != 13) {
 		if (typing === false && $('#m').is(":focus")) {
@@ -59,13 +60,9 @@ $('#m').keypress(function (e) {
 		}else {
 			clearTimeout(timeout);
 			timeout = setTimeout(timeoutFunction, 500);
-				if (!($("#m").val().length === 0)) {
-				console.log("Something happened");
-				sendToAll();
-		}
 		}
 	}else{
-		
+				sendToAll();
 	}
 });
 /*--*/
@@ -83,17 +80,12 @@ socket.on("isTyping", function (PersonTypingObj) {
 	}
 });
 
-// You sending message
-$('#submit').click(function () {
-	if (!($("#m").val().length === 0)) {
-		sendToAll();
-	}
-	return false;
-});
 
 function sendToAll() {
 
+	if (!($("#m").val().length === 0)) {
 	socket.emit('chat message', visual_sendMessage("all"));
+	}
 }
 
 function sendToUser(e) {
