@@ -1,6 +1,6 @@
 {
   "name": "Thread-Chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "my first socket.io app",
   "engines": {
     "node": "0.10.33",
@@ -10,5 +10,9 @@
     "express": "^4.11.2",
     "require": "^2.4.17",
     "socket.io": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/novaonline/Threaded-Chat.git"
   }
 }
